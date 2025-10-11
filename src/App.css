@@ -23,8 +23,8 @@
   background-color: rgba(0, 0, 0, 0.93);
   transition: 0.5s all;
   animation: bgOpacity 3s 0s infinite ease-in-out;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
