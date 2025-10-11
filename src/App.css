@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   margin: 0;
   background-image: url('./assets/background.jpeg');
@@ -55,7 +55,7 @@ h1 {
   background-color: #dbe2e9;
   color: black;
   width: 600px;
-  height: 80vh;
+  height: 80dvh;
   overflow-y: hidden;
   overflow-x: hidden;
   padding: 15px;
@@ -151,7 +151,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   z-index: 15;
   background-color: rgba(0, 0, 0, 0.85);
@@ -242,7 +242,7 @@ h1 {
 
 @media (max-width: 600px) {
   .carta {
-    height: 85vh;
+    height: 85dvh;
     width: 85vw;
     overflow-y: scroll;
   }
