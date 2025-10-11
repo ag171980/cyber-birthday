@@ -1,38 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+  font-family: 'Roboto Mono', monospace;
+  user-select: none;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #dbe2e9;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-image: url('./assets/background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  background-color: rgba(0, 0, 0, 0.93);
+  transition: 0.5s all;
+  animation: bgOpacity 3s 0s infinite ease-in-out;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 50px;
+  align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.cuenta-regresiva {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.saludo {
+  display: none;
+  transition: 0.5s all;
+}
+
+.carta {
+  background-color: #dbe2e9;
+  color: black;
+  width: 600px;
+  height: 80vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 15px;
+  border-radius: 6px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  animation: showCard 2s 0s 1 ease-in-out;
+}
+
+.carta .logo-principal {
+  height: 120px;
+  width: 170px;
+  object-fit: cover;
+}
+
+.carta p {
+  margin-top: 15px;
+  text-align: justify;
+}
+.carta::-webkit-scrollbar {
+  display: none;
+}
+.destacados {
+  font-weight: bold;
+}
+.bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn {
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  padding: 15px;
+  width: 60%;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #b1c0e1;
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.nombre-img {
+  height: 5px;
+  width: 40px;
+  margin-right: 95px;
+  margin-left: 80px;
+  margin-bottom: 7px;
+  /* background-color: rgba(0, 0, 0, 0.85); */
+  object-fit: cover;
+  transform: scale(10);
+}
+.regalos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.regalo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.regalo-box {
+  height: 160px;
+  transition: 0.2s all;
+}
+
+.regalo-box:hover {
+  cursor: pointer;
+  transform: rotateZ(15deg) scale(1.2);
+}
+
+.ver-regalos {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100vw;
+  z-index: 15;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ver-regalos .btn-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: red;
   color: white;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 45px;
 }
 
-.App-link {
-  color: #61dafb;
+.ver-regalos .btn-close:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.ver-regalos small {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 18px;
+  color: #b1c0e1;
+}
+
+.video {
+  width: 70%;
+  height: 70%;
+}
+
+.troll {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.miata-troll {
+  height: 50px;
+  margin: 0 15px;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.5s all;
+}
+
+@keyframes bgOpacity {
+  0% {
+    background-color: rgba(0, 0, 0, 0.93);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.93);
+  }
+}
+
+@keyframes showCard {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+  .carta {
+    height: 85vh;
+    width: 85vw;
+    overflow-y: scroll;
+  }
+
+  .nombre-img {
+    margin-right: 95px;
+    margin-left: 90px;
+  }
+  .ver-regalos small {
+    font-size: 15px;
+  }
+  .bottom {
+    position: relative;
+    margin-top: 25px;
   }
 }
