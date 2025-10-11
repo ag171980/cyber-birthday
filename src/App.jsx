@@ -102,9 +102,18 @@ function App () {
             <div className='carta'>
               {!showSection && (
                 <>
-                  <img className='logo-principal' src={Logo} alt='Logo de Cybernahir' />
+                  <img
+                    className='logo-principal'
+                    src={Logo}
+                    alt='Logo de Cybernahir'
+                  />
                   <h1>
-                    FELIZ CUMPLEAÑOS <img className='nombre-img' src={Nombre} />
+                    FELIZ CUMPLEAÑOS{' '}
+                    <img
+                      className='nombre-img'
+                      src={Nombre}
+                      alt='Logo de Cybernahir'
+                    />
                     !
                   </h1>
                   <br />
@@ -195,9 +204,21 @@ function App () {
                     <div>
                       <p>Tenés que abrir el primer regalo </p>
                       <div className='troll'>
-                        <img className='miata-troll' src={MiataTroll} alt='Logo de Cybernahir' />
-                        <img className='miata-troll' src={MiataTroll} alt='Logo de Cybernahir' />
-                        <img className='miata-troll' src={MiataTroll} alt='Logo de Cybernahir' />
+                        <img
+                          className='miata-troll'
+                          src={MiataTroll}
+                          alt='Logo de Cybernahir'
+                        />
+                        <img
+                          className='miata-troll'
+                          src={MiataTroll}
+                          alt='Logo de Cybernahir'
+                        />
+                        <img
+                          className='miata-troll'
+                          src={MiataTroll}
+                          alt='Logo de Cybernahir'
+                        />
                       </div>
                     </div>
                   )}
