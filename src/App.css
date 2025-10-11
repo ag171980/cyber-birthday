@@ -241,9 +241,6 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  .container {
-    padding: 20px;
-  }
   .carta {
     height: 85vh;
     width: 85vw;
