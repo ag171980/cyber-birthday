@@ -1,17 +1,18 @@
-import Logo from './assets/logo.png'
+import Logo from './assets/0c80faac-15d0-4a16-b443-c94e903f8e3a.png'
 import './App.css'
+import { useEffect, useState } from 'react'
 import { useWindowSize } from 'react-use'
 import Confetti from 'react-confetti'
-import { useEffect, useState } from 'react'
 
-import Nombre from './assets/nombre.png'
-import MiataTroll from './assets/miata_troll.png'
-import GiftBox from './assets/gift_box.webp'
+import First from './assets/768581b4-4174-4084-a533-cbea7259fbe0.png'
+import Second from './assets/12fc2ef6-171a-47fb-a420-2fc4f38a1284.png'
+import Random1 from './assets/87bb1219-931d-4d91-b89e-bc11b48ae9e7.webp'
 
-import video1 from './assets/saludo_troll.mp4'
-import video2 from './assets/saludo.mp4'
+// regalos
+import Random3 from './assets/209804dc-719c-41fb-8439-d9ddd2667422.mp4'
+import Random4 from './assets/072fb61d-75b4-40f4-a4c5-14bb2c17598b.mp4'
 
-import MiataDancing from './assets/miata_twerking_smol.gif'
+import Random2 from './assets/4d32017e-98ce-4422-bdcf-a5a34f6661c3.gif'
 
 import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown'
 import '@leenguyen/react-flip-clock-countdown/dist/index.css'
@@ -19,7 +20,7 @@ import '@leenguyen/react-flip-clock-countdown/dist/index.css'
 function App () {
   const isMobile = window.innerWidth < 600
   const [targetDate] = useState(new Date('2025-10-13T00:00:00'))
-  const [gifts] = useState([video1, video2])
+  const [gifts] = useState([Random3, Random4])
   const [stateCount, setStateCount] = useState(false)
   const [showGift, setShowGift] = useState(undefined)
   const [showTroll, setShowTroll] = useState(false)
@@ -124,7 +125,7 @@ function App () {
                     FELIZ CUMPLEAÑOS{' '}
                     <img
                       className='nombre-img'
-                      src={Nombre}
+                      src={First}
                       alt='Logo de Cybernahir'
                     />
                     !
@@ -170,7 +171,7 @@ function App () {
 
               {showSection && (
                 <>
-                  <img src={MiataDancing} alt='Logo de Cybernahir' />
+                  <img src={Random2} alt='Logo de Cybernahir' />
                   <h3>Hace click en los regalos para abrirlos</h3>
                   <div className='regalos'>
                     <div className='regalo'>
@@ -178,7 +179,7 @@ function App () {
                       <img
                         onClick={() => abrirPrimerRegalo()}
                         className='regalo-box'
-                        src={GiftBox}
+                        src={Random1}
                         alt='Logo de Cybernahir'
                       />
                     </div>
@@ -187,7 +188,7 @@ function App () {
                       <img
                         onClick={() => abrirSegundoRegalo()}
                         className='regalo-box'
-                        src={GiftBox}
+                        src={Random1}
                         alt='Logo de Cybernahir'
                       />
                     </div>
@@ -219,17 +220,17 @@ function App () {
                       <div className='troll'>
                         <img
                           className='miata-troll'
-                          src={MiataTroll}
+                          src={Second}
                           alt='Logo de Cybernahir'
                         />
                         <img
                           className='miata-troll'
-                          src={MiataTroll}
+                          src={Second}
                           alt='Logo de Cybernahir'
                         />
                         <img
                           className='miata-troll'
-                          src={MiataTroll}
+                          src={Second}
                           alt='Logo de Cybernahir'
                         />
                       </div>
