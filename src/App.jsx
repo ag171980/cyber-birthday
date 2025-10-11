@@ -43,9 +43,13 @@ function App () {
     }
   }
 
-  useEffect(() => {
+  const cambiarVista = () => {
     document.querySelector('.cuenta-regresiva')?.classList.remove('show')
     document.querySelector('.saludo')?.classList.add('show')
+  }
+
+  useEffect(() => {
+    cambiarVista()
   }, [stateCount])
 
   return (
@@ -96,6 +100,15 @@ function App () {
                 }
           }
         />
+        {/* {!stateCount && (
+          <button
+            onClick={() => {
+              setStateCount(true)
+            }}
+          >
+            Acelerar proceso
+          </button>
+        )} */}
         {stateCount && (
           <div className='saludo'>
             <Confetti width={width} height={height} />
