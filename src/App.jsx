@@ -49,6 +49,9 @@ function App () {
     document.querySelector('.saludo')?.classList.add('show')
   }
 
+  console.log('Si tenes idea de esto, no seas mogul y no hagas spoiler c:')
+  console.log('poto')
+
   useEffect(() => {
     cambiarVista()
   }, [stateCount])
@@ -219,17 +222,17 @@ function App () {
                       <p>Tenés que abrir el primer regalo </p>
                       <div className='troll'>
                         <img
-                          className='miata-troll'
+                          className='meme'
                           src={Second}
                           alt='Logo de Cybernahir'
                         />
                         <img
-                          className='miata-troll'
+                          className='meme'
                           src={Second}
                           alt='Logo de Cybernahir'
                         />
                         <img
-                          className='miata-troll'
+                          className='meme'
                           src={Second}
                           alt='Logo de Cybernahir'
                         />
