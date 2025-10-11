@@ -102,7 +102,7 @@ function App () {
             <div className='carta'>
               {!showSection && (
                 <>
-                  <img className='logo-principal' src={Logo} alt='' />
+                  <img className='logo-principal' src={Logo} alt='Logo de Cybernahir' />
                   <h1>
                     FELIZ CUMPLEAÑOS <img className='nombre-img' src={Nombre} />
                     !
@@ -148,7 +148,7 @@ function App () {
 
               {showSection && (
                 <>
-                  <img src={MiataDancing} alt='' />
+                  <img src={MiataDancing} alt='Logo de Cybernahir' />
                   <h3>Hace click en los regalos para abrirlos</h3>
                   <div className='regalos'>
                     <div className='regalo'>
@@ -157,7 +157,7 @@ function App () {
                         onClick={() => abrirPrimerRegalo()}
                         className='regalo-box'
                         src={GiftBox}
-                        alt=''
+                        alt='Logo de Cybernahir'
                       />
                     </div>
                     <div className='regalo'>
@@ -166,7 +166,7 @@ function App () {
                         onClick={() => abrirSegundoRegalo()}
                         className='regalo-box'
                         src={GiftBox}
-                        alt=''
+                        alt='Logo de Cybernahir'
                       />
                     </div>
                   </div>
@@ -195,9 +195,9 @@ function App () {
                     <div>
                       <p>Tenés que abrir el primer regalo </p>
                       <div className='troll'>
-                        <img className='miata-troll' src={MiataTroll} alt='' />
-                        <img className='miata-troll' src={MiataTroll} alt='' />
-                        <img className='miata-troll' src={MiataTroll} alt='' />
+                        <img className='miata-troll' src={MiataTroll} alt='Logo de Cybernahir' />
+                        <img className='miata-troll' src={MiataTroll} alt='Logo de Cybernahir' />
+                        <img className='miata-troll' src={MiataTroll} alt='Logo de Cybernahir' />
                       </div>
                     </div>
                   )}
