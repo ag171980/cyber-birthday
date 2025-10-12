@@ -8,9 +8,9 @@ import First from './assets/768581b4-4174-4084-a533-cbea7259fbe0.png'
 import Second from './assets/12fc2ef6-171a-47fb-a420-2fc4f38a1284.png'
 import Random1 from './assets/87bb1219-931d-4d91-b89e-bc11b48ae9e7.webp'
 
-// regalos
 import Random3 from './assets/209804dc-719c-41fb-8439-d9ddd2667422.mp4'
 import Random4 from './assets/072fb61d-75b4-40f4-a4c5-14bb2c17598b.mp4'
+import Random5 from './assets/3daf87e9-329a-41d9-9ebd-939e509dfd07.png'
 
 import Random2 from './assets/4d32017e-98ce-4422-bdcf-a5a34f6661c3.gif'
 
@@ -20,7 +20,8 @@ import '@leenguyen/react-flip-clock-countdown/dist/index.css'
 function App () {
   const isMobile = window.innerWidth < 600
   const [targetDate] = useState(new Date('2025-10-13T00:00:00'))
-  const [gifts] = useState([Random3, Random4])
+  const [gifts] = useState([Random5, Random3, Random4])
+  const [isVideo, setIsVideo] = useState(false)
   const [stateCount, setStateCount] = useState(false)
   const [showGift, setShowGift] = useState(undefined)
   const [showTroll, setShowTroll] = useState(false)
@@ -30,12 +31,26 @@ function App () {
 
   const abrirPrimerRegalo = () => {
     setShowGift(gifts[0])
+    setIsVideo(false)
     setFirstGiftOpened(true)
   }
 
   const abrirSegundoRegalo = () => {
     if (firstGiftOpened) {
       setShowGift(gifts[1])
+      setIsVideo(true)
+    } else {
+      setShowTroll(true)
+      setTimeout(() => {
+        setShowTroll(false)
+      }, 3000)
+    }
+  }
+
+  const abrirTercerRegalo = () => {
+    if (firstGiftOpened) {
+      setShowGift(gifts[2])
+      setIsVideo(true)
     } else {
       setShowTroll(true)
       setTimeout(() => {
@@ -195,6 +210,15 @@ function App () {
                         alt='Logo de Cybernahir'
                       />
                     </div>
+                    <div className='regalo'>
+                      <h4>Regalo 3</h4>
+                      <img
+                        onClick={() => abrirTercerRegalo()}
+                        className='regalo-box'
+                        src={Random1}
+                        alt='Logo de Cybernahir'
+                      />
+                    </div>
                   </div>
 
                   {showGift && (
@@ -205,16 +229,22 @@ function App () {
                       >
                         X
                       </button>
-                      <video
-                        preload='none'
-                        className='video'
-                        src={showGift}
-                        controls
-                      ></video>
-                      <small>
-                        ⚠️Advertencia⚠️: Bajale un poco el volumen, no nos
-                        hacemos cargo de daños en los tímpanos.
-                      </small>
+                      {isVideo ? (
+                        <>
+                          <video
+                            preload='none'
+                            className='video'
+                            src={showGift}
+                            controls
+                          ></video>
+                          <small>
+                            ⚠️Advertencia⚠️: Bajale un poco el volumen, no nos
+                            hacemos cargo de daños en los tímpanos.
+                          </small>
+                        </>
+                      ) : (
+                        <img src={showGift} alt='Logo de Cybernahir' />
+                      )}
                     </div>
                   )}
                   {showTroll && (
