@@ -27,7 +27,26 @@ function App () {
   const [showTroll, setShowTroll] = useState(false)
   const [showSection, setShowSection] = useState(false)
   const [firstGiftOpened, setFirstGiftOpened] = useState(false)
+  const [disableMemide, setDisableMemide] = useState(false)
+  const [contentBtn, setContentBtn] = useState('!memide')
   const { width, height } = useWindowSize()
+
+  const memide = () => {
+    setDisableMemide(true)
+    setContentBtn('Midiendo...')
+
+    setTimeout(() => {
+      const random = Math.floor(Math.random() * 100) + 1
+
+      document.querySelector(
+        '#memide'
+      ).innerHTML = `Tienes una cybertula de ${random} centimetros`
+      setTimeout(() => {
+        setDisableMemide(false)
+        setContentBtn('!memide')
+      }, 500)
+    }, 2000)
+  }
 
   const abrirPrimerRegalo = () => {
     setShowGift(gifts[0])
@@ -276,6 +295,26 @@ function App () {
               )}
             </div>
           </div>
+        )}
+        {!stateCount && (
+          <>
+            <button
+              className='btn-memide'
+              disabled={disableMemide}
+              onClick={() => memide()}
+            >
+              {contentBtn}
+            </button>
+            <div id='memide'></div>
+            <a
+              className='twitch'
+              href='https://www.twitch.tv/cybernahir'
+              target='_blank'
+              rel='noreferrer'
+            >
+              twitch.tv/cybernahir
+            </a>
+          </>
         )}
       </div>
     </div>
