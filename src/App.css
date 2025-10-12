@@ -63,7 +63,7 @@ h1 {
   color: black;
   width: 600px;
   height: 80dvh;
-  overflow-y: hidden;
+  overflow-y: scroll;
   overflow-x: hidden;
   padding: 15px;
   border-radius: 6px;
@@ -215,6 +215,12 @@ h1 {
   margin: 0 15px;
 }
 
+.videoo {
+  height: 90%;
+  width: auto;
+  object-fit: contain;
+}
+
 .show {
   opacity: 1;
   visibility: visible;
@@ -283,14 +289,28 @@ h1 {
       0 0 50px #aebbdb, 0 0 60px #aebbdb, 0 0 70px #aebbdb, 0 0 80px #aebbdb;
   }
 }
-
+@media (max-height: 750px) {
+  .container {
+    padding-top: 15px;
+  }
+  .carta {
+    height: 90dvh;
+    /* padding-bottom: 11rem; */
+  }
+  .bottom {
+    position: relative;
+    margin-top: 25px;
+  }
+}
 @media (max-width: 600px) {
   .carta {
     height: 85dvh;
     width: 85vw;
     overflow-y: scroll;
   }
-
+  .videoo {
+    width: 90%;
+  }
   .nombre-img {
     margin-right: 95px;
     margin-left: 90px;

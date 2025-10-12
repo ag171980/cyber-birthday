@@ -27,6 +27,7 @@ function App () {
   const [showTroll, setShowTroll] = useState(false)
   const [showSection, setShowSection] = useState(false)
   const [firstGiftOpened, setFirstGiftOpened] = useState(false)
+  const [secondGiftOpened, setSecondGiftOpened] = useState(false)
   const [disableMemide, setDisableMemide] = useState(false)
   const [contentBtn, setContentBtn] = useState('!memide')
   const { width, height } = useWindowSize()
@@ -58,6 +59,7 @@ function App () {
     if (firstGiftOpened) {
       setShowGift(gifts[1])
       setIsVideo(true)
+      setSecondGiftOpened(true)
     } else {
       setShowTroll(true)
       setTimeout(() => {
@@ -67,7 +69,7 @@ function App () {
   }
 
   const abrirTercerRegalo = () => {
-    if (firstGiftOpened) {
+    if (firstGiftOpened && secondGiftOpened) {
       setShowGift(gifts[2])
       setIsVideo(true)
     } else {
@@ -192,7 +194,7 @@ function App () {
                     tanto es lindo recordarte lo que significas para nosotros,
                     tanto vos como tu trabajo.
                     <br />
-                    <br />A continuación, te dejamos 2 regalitos (aparte del que
+                    <br />A continuación, te dejamos 3 regalitos (aparte del que
                     esta llegando 🚚...) para que abras.
                   </p>
                   <div className='bottom'>
@@ -262,13 +264,17 @@ function App () {
                           </small>
                         </>
                       ) : (
-                        <img src={showGift} alt='Logo de Cybernahir' />
+                        <img
+                          className='videoo'
+                          src={showGift}
+                          alt='Logo de Cybernahir'
+                        />
                       )}
                     </div>
                   )}
                   {showTroll && (
                     <div>
-                      <p>Tenés que abrir el primer regalo </p>
+                      <p>Tenés que abrir los otros regalos </p>
                       <div className='troll'>
                         <img
                           className='meme'
