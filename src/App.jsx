@@ -19,7 +19,7 @@ import '@leenguyen/react-flip-clock-countdown/dist/index.css'
 
 function App () {
   const isMobile = window.innerWidth < 600
-  const [targetDate] = useState(new Date('2025-10-13T00:00:00'))
+  const [targetDate] = useState(new Date('2026-10-13T00:00:00'))
   const [gifts] = useState([Random5, Random3, Random4])
   const [isVideo, setIsVideo] = useState(false)
   const [stateCount, setStateCount] = useState(false)

@@ -1,6 +1,6 @@
 {
-  "name": "testeo",
-  "version": "0.1.0",
+  "name": "cybercumple",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@leenguyen/react-flip-clock-countdown": "^1.7.2",
