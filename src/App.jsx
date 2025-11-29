@@ -16,6 +16,7 @@ import Random2 from './assets/4d32017e-98ce-4422-bdcf-a5a34f6661c3.gif'
 
 import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown'
 import '@leenguyen/react-flip-clock-countdown/dist/index.css'
+import Social from './components/Social/Social'
 
 function App () {
   const isMobile = window.innerWidth < 600
@@ -312,14 +313,16 @@ function App () {
               {contentBtn}
             </button>
             <div id='memide'></div>
-            <a
+            {/* <a
               className='twitch'
               href='https://www.twitch.tv/cybernahir'
               target='_blank'
               rel='noreferrer'
             >
               twitch.tv/cybernahir
-            </a>
+            </a> */}
+
+            <Social />
           </>
         )}
       </div>
