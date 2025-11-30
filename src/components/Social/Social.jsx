@@ -6,11 +6,13 @@ import InstagramIcon from '../../assets/icons/instagram.png'
 import DiscordIcon from '../../assets/icons/discord.webp'
 import XIcon from '../../assets/icons/x.png'
 import WhatsappIcon from '../../assets/icons/whatsapp.png'
+import SpotifyIcon from '../../assets/icons/spotify.png'
 
 import './Social.css'
 
 const Social = () => {
-  const [socials, _] = useState([
+  
+  const [socials,] = useState([
     {
       id: 0,
       icon: TwitchIcon,
@@ -52,6 +54,13 @@ const Social = () => {
       nombre: 'Whatsapp',
       url: 'https://whatsapp.com/channel/0029VaooMXIDp2QE4K6Gwa3f',
       rel: '_blank'
+    },
+    {
+      id: 6,
+      icon: SpotifyIcon,
+      nombre: 'Spotify',
+      url: 'https://open.spotify.com/artist/6V7vkdKk5KWM2HAfVZqeiH?si=B9QwI6lbRBygHkcs6anKTA',
+      rel: '_blank'
     }
   ])
   return (
@@ -64,7 +73,7 @@ const Social = () => {
           target={social.rel}
           title={social.nombre}
         >
-          <img src={social.icon} />
+          <img src={social.icon} alt='' />
         </a>
       ))}
     </div>
